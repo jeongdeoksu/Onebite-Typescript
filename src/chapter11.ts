@@ -1,3 +1,5 @@
+//* 11. 기본타입
+
 // number
 let num1: number = 123;
 let num2: number = -123;
