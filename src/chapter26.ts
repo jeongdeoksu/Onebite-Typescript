@@ -9,10 +9,10 @@ type Person = {
   age: number;
 };
 
-// value > number : toFixed
-// value > string : toUpperCase
-// value > Date : getTime
-// value > Person : name은 age살입니다.
+// value > number : toFixed [타입가드 typeof]
+// value > string : toUpperCase [타입가드 typeof]
+// value > Date : getTime [타입가드 instanceof]
+// value > Person : name은 age살입니다. [타입가드 in]
 function func(value: number | string | Date | null | Person) {
   if (typeof value === 'number') {
     console.log(value.toFixed());
