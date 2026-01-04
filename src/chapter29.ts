@@ -1,5 +1,6 @@
 /**
  * 함수 타입 표현식
+ * 함수 타입을 별도로 정의할 수 있다.
  */
 
 type Operation = (a: number, b: number) => number;
@@ -12,13 +13,17 @@ const divide: Operation = (a, b) => a / b;
 /**
  * 호출 시그니처
  * (콜 시그니처)
+ * property를 추가로 정의할 수 있다. > 하이브라드 타입
  */
 
 type Operation2 = {
   (a: number, b: number): number;
+  name: string;
 };
 
 const add2: Operation2 = (a, b) => a + b;
 const sub2: Operation2 = (a, b) => a - b;
 const multiply2: Operation2 = (a, b) => a * b;
 const divide2: Operation2 = (a, b) => a / b;
+
+add2.name = 'add';
